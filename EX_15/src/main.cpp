@@ -16,7 +16,7 @@ void vTaskTrataBT(void *pvParameters);
 
 void callBackBT(void)
 {
-  vTaskNotifyGiveFromISR(xTaskTrataBTHandle,NULL);
+ vTaskNotifyGiveFromISR(xTaskTrataBTHandle, (BaseType_t*) pdFALSE);
 }
 
 void setup()
